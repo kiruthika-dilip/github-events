@@ -12,6 +12,7 @@ on:
 
     #we should be adding the second event like this with colon at the end, even though we don't have any types
     #adding comments
+    #reverting comments
   workflow_dispatch:
   push:
     branches:
