@@ -11,6 +11,7 @@ on:
       - dev
 
     #we should be adding the second event like this with colon at the end, even though we don't have any types
+    #adding comments
   workflow_dispatch:
   push:
     branches:
