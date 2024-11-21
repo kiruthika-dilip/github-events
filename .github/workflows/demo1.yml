@@ -1,5 +1,14 @@
 name: Events Demo 1
-on: ...
+on: 
+  pull_request:
+    types: [opened, edited, closed]
+    #another way of writing types
+    #types:
+      #-opened
+      #-closed
+
+    #we should be adding the second event like this with colon at the end, even though we don't have any types
+    workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
