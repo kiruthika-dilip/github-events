@@ -6,9 +6,21 @@ on:
     #types:
       #-opened
       #-closed
+    branches:
+      - main
+      - dev
 
     #we should be adding the second event like this with colon at the end, even though we don't have any types
     workflow_dispatch:
+    push:
+      branches:
+        - main
+        - 'dev-*' #dev, dev-new, dev-this
+        - 'feat/**' #feature/branch_name
+      paths-ignore:
+        - './github/workflows/*'
+      paths:
+        - './github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
